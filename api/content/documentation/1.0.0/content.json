@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/propiedades": {
+    "/contents": {
       "get": {
         "deprecated": false,
-        "description": "Find all the propiedades's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve propiedades document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Propiedades"
+                    "$ref": "#/components/schemas/Content"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Propiedades"
+          "Content"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new propiedades record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve propiedades document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Propiedades"
+                  "$ref": "#/components/schemas/Content"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Propiedades"
+          "Content"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPropiedades"
+                "$ref": "#/components/schemas/NewContent"
               }
             }
           }
         }
       }
     },
-    "/propiedades/count": {
+    "/contents/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of propiedades documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve propiedades document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Propiedades"
+          "Content"
         ],
         "parameters": []
       }
     },
-    "/propiedades/{id}": {
+    "/contents/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one propiedades record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve propiedades document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Propiedades"
+                  "$ref": "#/components/schemas/Content"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Propiedades"
+          "Content"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single propiedades record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve propiedades document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Propiedades"
+                  "$ref": "#/components/schemas/Content"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Propiedades"
+          "Content"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPropiedades"
+                "$ref": "#/components/schemas/NewContent"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single propiedades record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single propiedades based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Propiedades"
+          "Content"
         ],
         "parameters": [
           {
@@ -514,38 +514,30 @@
   },
   "components": {
     "schemas": {
-      "Propiedades": {
+      "Content": {
         "required": [
-          "id",
-          "nombres",
-          "habitacion",
-          "estacionamiento",
-          "wc",
-          "imagen"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "nombres": {
+          "title": {
             "type": "string"
           },
-          "habitacion": {
-            "type": "integer"
-          },
-          "estacionamiento": {
-            "type": "integer"
-          },
-          "wc": {
-            "type": "integer"
-          },
-          "descripcion": {
+          "subtitle": {
             "type": "string"
           },
-          "precio": {
-            "type": "integer"
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "team",
+              "service",
+              "technology",
+              "medium"
+            ]
           },
-          "imagen": {
+          "image": {
             "required": [
               "id",
               "name",
@@ -612,37 +604,86 @@
               }
             }
           },
+          "description": {
+            "type": "string"
+          },
+          "section": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewPropiedades": {
-        "required": [
-          "nombres",
-          "habitacion",
-          "estacionamiento",
-          "wc"
-        ],
+      "NewContent": {
         "properties": {
-          "nombres": {
+          "title": {
             "type": "string"
           },
-          "habitacion": {
-            "type": "integer"
-          },
-          "estacionamiento": {
-            "type": "integer"
-          },
-          "wc": {
-            "type": "integer"
-          },
-          "descripcion": {
+          "subtitle": {
             "type": "string"
           },
-          "precio": {
-            "type": "integer"
+          "tipo": {
+            "type": "string",
+            "enum": [
+              "team",
+              "service",
+              "technology",
+              "medium"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "section": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -660,7 +701,7 @@
   },
   "tags": [
     {
-      "name": "Propiedades"
+      "name": "Content"
     }
   ]
 }

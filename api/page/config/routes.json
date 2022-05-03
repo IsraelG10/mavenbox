@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/propiedades",
-      "handler": "propiedades.find",
+      "path": "/pages",
+      "handler": "page.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/propiedades/count",
-      "handler": "propiedades.count",
+      "path": "/pages/count",
+      "handler": "page.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/propiedades/:id",
-      "handler": "propiedades.findOne",
+      "path": "/pages/:id",
+      "handler": "page.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/propiedades",
-      "handler": "propiedades.create",
+      "path": "/pages",
+      "handler": "page.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/propiedades/:id",
-      "handler": "propiedades.update",
+      "path": "/pages/:id",
+      "handler": "page.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/propiedades/:id",
-      "handler": "propiedades.delete",
+      "path": "/pages/:id",
+      "handler": "page.delete",
       "config": {
         "policies": []
       }

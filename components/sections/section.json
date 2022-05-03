@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_sections",
+  "info": {
+    "name": "section",
+    "icon": "gamepad"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
