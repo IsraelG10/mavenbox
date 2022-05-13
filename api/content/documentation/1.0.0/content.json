@@ -534,7 +534,8 @@
               "team",
               "service",
               "technology",
-              "medium"
+              "medium",
+              "custumer"
             ]
           },
           "image": {
@@ -633,6 +634,9 @@
               }
             }
           },
+          "slug": {
+            "type": "uid"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -653,7 +657,8 @@
               "team",
               "service",
               "technology",
-              "medium"
+              "medium",
+              "custumer"
             ]
           },
           "description": {
@@ -684,6 +689,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "published_at": {
             "type": "string",
