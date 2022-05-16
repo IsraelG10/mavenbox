@@ -24,7 +24,8 @@
         "service",
         "technology",
         "medium",
-        "custumer"
+        "custumer",
+        "language"
       ]
     },
     "image": {
