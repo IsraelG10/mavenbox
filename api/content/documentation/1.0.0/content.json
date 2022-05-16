@@ -536,7 +536,8 @@
               "technology",
               "medium",
               "custumer",
-              "language"
+              "language",
+              "tab"
             ]
           },
           "image": {
@@ -730,7 +731,8 @@
               "technology",
               "medium",
               "custumer",
-              "language"
+              "language",
+              "tab"
             ]
           },
           "description": {
