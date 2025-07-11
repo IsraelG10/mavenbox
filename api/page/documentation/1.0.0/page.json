@@ -604,46 +604,6 @@
           "slug": {
             "type": "uid"
           },
-          "contents": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "subtitle": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "section": {
-                "type": "component"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -663,9 +623,6 @@
           },
           "slug": {
             "type": "uid"
-          },
-          "contents": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
