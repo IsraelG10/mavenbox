@@ -34,9 +34,6 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
-    },
-    "contents": {
-      "collection": "content"
     }
   }
 }
