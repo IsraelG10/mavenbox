@@ -1,37 +1,43 @@
 {
-  "name": "mavenbox",
-  "private": true,
+  "name": "v-5",
   "version": "0.1.0",
+  "private": true,
   "description": "A Strapi application",
   "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "strapi": "3.4.1",
-    "strapi-admin": "3.4.1",
-    "strapi-connector-mongoose": "3.4.1",
-    "strapi-plugin-content-manager": "3.4.1",
-    "strapi-plugin-content-type-builder": "3.4.1",
-    "strapi-plugin-documentation": "3.4.1",
-    "strapi-plugin-email": "3.4.1",
-    "strapi-plugin-graphql": "3.4.1",
-    "strapi-plugin-upload": "3.4.1",
-    "strapi-plugin-users-permissions": "3.4.1",
-    "strapi-provider-upload-cloudinary": "^3.6.9",
-    "strapi-utils": "3.4.1"
+    "@strapi/plugin-cloud": "5.19.0",
+    "@strapi/plugin-graphql": "^5.19.0",
+    "@strapi/plugin-users-permissions": "5.19.0",
+    "@strapi/provider-upload-cloudinary": "^5.19.0",
+    "@strapi/strapi": "5.19.0",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "be343002-17c1-46ee-8d29-5e70586b4181"
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "27447039-ee1d-43e3-aee2-5c78a596ab80",
+    "installId": "614bfbdaac24425e1919ed2c6ed552ff4cd58c3df120ef2614d547c36bfaff5b"
+  }
 }
